@@ -1,14 +1,10 @@
-# import tensorflow.lite as tflite
-from keras_image_helper import create_preprocessor
+# import lrequired libraries
+from PIL import Image
+import numpy as np
+import tflite_runtime.interpreter as tflite
+import requests
+from io import BytesIO
 
-
-preprocessor = create_preprocessor("xception", target_size=(150, 150))
-
-interpreter = tflite.Interpreter(model_path="catbreeds-model.tflite")
-interpreter.allocate_tensors()
-
-input_index = interpreter.get_input_details()[0]["index"]
-output_index = interpreter.get_output_details()[0]["index"]
 
 classes = [
     "Abyssinian",
@@ -33,20 +29,38 @@ classes = [
     "Turkish Angora",
 ]
 
-# url = 'https://raw.githubusercontent.com/BuzzKanga/MLZoomCamp-CNN-CatBreedClassification/master/Abyssinian_1.jpg'
+# set-up model
+interpreter = tflite.Interpreter(model_path="catbreeds-model.tflite")
+interpreter.allocate_tensors()
+
+input_index = interpreter.get_input_details()[0]["index"]
+output_index = interpreter.get_output_details()[0]["index"]
 
 
 def predict(url):
-    X = preprocessor.from_url(url)
+    response = requests.get(url)
+    with Image.open(BytesIO(response.content)) as img:
+        img = img.resize((299, 299), Image.NEAREST)
 
+    # image pre-processing
+    x = np.array(img, dtype="float32")
+    X = np.array([x])   
+
+    X /= 127.5
+    X -= 1.0
+
+
+    # make prediction
     interpreter.set_tensor(input_index, X)
     interpreter.invoke()
     preds = interpreter.get_tensor(output_index)
 
-    return dict(zip(classes, preds[0]))
+    float_predictions = preds[0].tolist()
+
+    return dict(zip(classes, float_predictions))
 
 
 def lambda_handler(event, context):
-    url = event["url"]
+    url = event['url']
     result = predict(url)
     return result
