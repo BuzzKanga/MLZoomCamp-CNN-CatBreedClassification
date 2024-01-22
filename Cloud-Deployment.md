@@ -48,25 +48,25 @@ docker push ${REMOTE_URI}
 
 <u>Docker container in AWS</u>
 
-![](C:\Users\steve.christolis\AppData\Roaming\marktext\images\2024-01-22-18-14-00-image.png)
+![](images/Load_docker_container_into_ECR.png)
 
 <u>Executing Lambda function</u>
 ![Executing Lambda function](images/Executing_lambda_function.png)
 
 <u>Using API Gateway</u>
 
-![](images\Using_API_Gateway.png)
+![](images/Using_API_Gateway.png)
 
 url set to: https://raw.githubusercontent.com/BuzzKanga/MLZoomCamp-CNN-CatBreedClassification/master/Abyssinian_104.jpg
 
 ![](Abyssinian_104.jpg)
 
-![](C:\Users\steve.christolis\AppData\Roaming\marktext\images\2024-01-22-18-16-03-image.png)
+![](images/Using_API_Gateway1.png)
 
 <u>Deploy</u>
 
-![](C:\Users\steve.christolis\AppData\Roaming\marktext\images\2024-01-22-18-16-26-image.png)
+![](images/Deploy.png)
 
 <u>Response from Gateway</u>
 
-![](C:\Users\steve.christolis\AppData\Roaming\marktext\images\2024-01-22-18-16-42-image.png)
+![](images/Response_from_gateway.png)
