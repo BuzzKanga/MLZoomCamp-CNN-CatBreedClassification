@@ -51,7 +51,7 @@ docker push ${REMOTE_URI}
 ![](C:\Users\steve.christolis\AppData\Roaming\marktext\images\2024-01-22-18-14-00-image.png)
 
 <u>Executing Lambda function</u>
-![](.\images\Executing_lambda_function.png)
+![Executing Lambda function](images\Executing_lambda_function.png)
 
 <u>Using API Gateway</u>
 
