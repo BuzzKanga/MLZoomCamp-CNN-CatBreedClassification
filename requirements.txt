@@ -1,0 +1,8 @@
+jupyter==3.8
+matplotliib
+docker.io
+docker compose
+pillow
+numpy
+tensorflow
+tflite-runtime
