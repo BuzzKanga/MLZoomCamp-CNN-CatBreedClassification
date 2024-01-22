@@ -12,7 +12,9 @@ Identifying a breed of a cat from an image can help owners identify the breed of
 
 However, this project is to test the limits of a deep learning model and to determine if cat breeds look significantly different to a CNN model for it to be accurately determine which breed they are
 
-![cat-breeds.png](C:\Users\steve.christolis\OneDrive%20-%20Versent\Documents\Learning%20Projects\MLZoomCamp\CNN-CatBreedClassification\MLZoomCamp-CNN-CatBreedClassification\cat-breeds.png)
+
+
+![cat-breeds.png](cat-breeds.png)
 
 Once the CNN model has been trained, a user will be able to submit a photograph of a cat and the model will try to identify which breed the cat is from a set of 20 breeds that the model is trained upon.
 The model will not be sophisticated enough to identify if a cat is from a breed that is not from one of the 20 popular cat breeds used for training the model. This is a possible future enhancement for the model.
