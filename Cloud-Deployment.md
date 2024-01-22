@@ -50,16 +50,16 @@ docker push ${REMOTE_URI}
 
 ![](C:\Users\steve.christolis\AppData\Roaming\marktext\images\2024-01-22-18-14-00-image.png)
 
-<u>Excuting Lambda function</u>
-![](C:\Users\steve.christolis\AppData\Roaming\marktext\images\2024-01-22-18-14-44-image.png)
+<u>Executing Lambda function</u>
+![loading-ag-1135](images\Executing_lambda_function.png)
 
 <u>Using API Gateway</u>
 
-![](C:\Users\steve.christolis\AppData\Roaming\marktext\images\2024-01-22-18-15-51-image.png)
+![](images\Using_API_Gateway.png)
 
 url set to: https://raw.githubusercontent.com/BuzzKanga/MLZoomCamp-CNN-CatBreedClassification/master/Abyssinian_104.jpg
 
-![](C:\Users\steve.christolis\AppData\Roaming\marktext\images\2024-01-22-18-19-01-image.png)
+![](Abyssinian_104.jpg)
 
 ![](C:\Users\steve.christolis\AppData\Roaming\marktext\images\2024-01-22-18-16-03-image.png)
 
